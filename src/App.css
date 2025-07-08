@@ -1,0 +1,9 @@
+/* Remove default cursor */
+body {
+  cursor: none !important;
+}
+
+/* Interactive elements should show pointer state */
+a, button, [data-cursor-hover] {
+  cursor: none !important;
+}

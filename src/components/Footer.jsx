@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { SiLeetcode } from "react-icons/si";
 
 const Footer = () => {
   return (
@@ -38,6 +39,18 @@ const Footer = () => {
             </motion.a>
 
             <motion.a
+              href="https://leetcode.com/u/srinivasyr2000/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -4, scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-3 bg-gray-800 rounded-full border border-gray-700 hover:border-yellow-500/50 transition-all"
+              aria-label="LeetCode"
+            >
+              <SiLeetcode className="text-2xl text-gray-300 hover:text-yellow-400 transition-colors" />
+            </motion.a>
+
+            <motion.a
               href="mailto:srinivasyr2000@gmail.com"
               whileHover={{ y: -4, scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -57,7 +70,6 @@ const Footer = () => {
           >
             © {new Date().getFullYear()} Srinivasa YR. All rights reserved.
           </motion.p>
-
         </div>
       </div>
     </motion.footer>

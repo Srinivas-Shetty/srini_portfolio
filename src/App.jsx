@@ -9,6 +9,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import BackToTop from './utils/BackToTop'; // Add this import
 import Footer from './components/Footer';
+import Certifications from './components/Certifications';
 
 function App() {
   const [darkMode] = useState(true); // Force dark mode
@@ -20,10 +21,11 @@ function App() {
       <Hero />
       <Skills />
       <Projects />
+      <Certifications />
       <About />
       <Contact />
       <Footer />
-      <BackToTop /> {/* Add this component */}
+      <BackToTop /> 
     </div>
   );
 }

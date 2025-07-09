@@ -32,8 +32,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-20 bg-gray-900 w-full overflow-hidden">
+      <div className="mx-auto w-full max-w-7xl px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,19 +50,19 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-col lg:flex-row gap-8 w-full">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="lg:w-1/3"
+            className="lg:w-1/3 w-full"
           >
-            <div className="space-y-8">
+            <div className="space-y-6 w-full">
               {/* Contact Card - Email */}
               <motion.div 
                 whileHover={{ y: -5 }}
-                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-500/30 transition-all"
+                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-500/30 transition-all w-full"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-purple-500/10 rounded-full text-purple-400">
@@ -72,9 +72,9 @@ const Contact = () => {
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                     <a 
                       href="mailto:srinivasyr2000@gmail.com" 
-                      className="text-gray-400 hover:text-purple-400 transition-colors"
+                      className="text-gray-400 hover:text-purple-400 transition-colors break-all"
                     >
-                     srinivasyr2000@gmail.com
+                      srinivasyr2000@gmail.com
                     </a>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ const Contact = () => {
               {/* Contact Card - Phone */}
               <motion.div 
                 whileHover={{ y: -5 }}
-                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500/30 transition-all"
+                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500/30 transition-all w-full"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-blue-500/10 rounded-full text-blue-400">
@@ -92,7 +92,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
                     <a 
-                      href="tel:+1234567890" 
+                      href="tel:+919353291833" 
                       className="text-gray-400 hover:text-blue-400 transition-colors"
                     >
                       +91 9353291833
@@ -104,7 +104,7 @@ const Contact = () => {
               {/* Contact Card - Location */}
               <motion.div 
                 whileHover={{ y: -5 }}
-                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/30 transition-all"
+                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-cyan-500/30 transition-all w-full"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-cyan-500/10 rounded-full text-cyan-400">
@@ -112,7 +112,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Location</h3>
-                    <p className="text-gray-400">Hebbal , Bangalore - 560024</p>
+                    <p className="text-gray-400">Hebbal, Bangalore - 560024</p>
                   </div>
                 </div>
               </motion.div>
@@ -124,9 +124,9 @@ const Contact = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="lg:w-2/3"
+            className="lg:w-2/3 w-full"
           >
-            <form onSubmit={handleSubmit} className="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
+            <form onSubmit={handleSubmit} className="bg-gray-800/50 p-6 sm:p-8 rounded-xl border border-gray-700 w-full">
               {/* Name Field */}
               <div className="mb-6">
                 <label htmlFor="name" className="block text-gray-300 mb-2">Name</label>
@@ -156,12 +156,12 @@ const Contact = () => {
               </div>
 
               {/* Message Field */}
-              <div className="mb-8">
+              <div className="mb-6">
                 <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
                 <textarea
                   id="message"
                   name="message"
-                  rows="5"
+                  rows="4"
                   value={formData.message}
                   onChange={handleChange}
                   required

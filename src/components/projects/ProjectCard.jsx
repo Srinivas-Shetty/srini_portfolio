@@ -9,7 +9,7 @@ const ProjectCard = ({ project, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
       whileHover={{ y: -10 }}
-      className="bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500/30 transition-all"
+      className="bg-gray-800/50 rounded-xl overflow-hidden border border-gray-700 hover:border-purple-500/30 transition-all h-full"
     >
       {/* Project Image */}
       <div className="h-48 bg-gray-700 relative overflow-hidden">
@@ -22,9 +22,12 @@ const ProjectCard = ({ project, index }) => {
       </div>
 
       {/* Project Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-        <p className="text-gray-400 mb-4">{project.description}</p>
+      <div className="p-6 flex flex-col h-[calc(100%-12rem)]">
+        <div className="flex justify-between items-start mb-2">
+          <h3 className="text-xl font-bold text-white">{project.title}</h3>
+          <span className="text-sm text-gray-400">{project.date}</span>
+        </div>
+        <p className="text-gray-400 mb-4 flex-grow">{project.description}</p>
         
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-6">
@@ -39,7 +42,7 @@ const ProjectCard = ({ project, index }) => {
         </div>
 
         {/* Links */}
-        <div className="flex gap-4">
+        {/* <div className="flex gap-4 mt-auto">
           <a 
             href={project.github}
             className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
@@ -54,9 +57,9 @@ const ProjectCard = ({ project, index }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <FiExternalLink /> Live Demo
+            <FiExternalLink /> View
           </a>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
